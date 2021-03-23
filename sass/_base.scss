@@ -1,0 +1,17 @@
+:root {
+  --primary-background-color: rgba(128, 128, 128, 0.7);
+  --primary-color: peru;
+  --primary-light-color: rgba(205, 134, 63, 0.75);
+  --secondary-color: orchid;
+  --tertiary-color: purple;
+  --box-shadow: 0 4px 4px black;
+}
+
+html {
+  font-family: "Raleway", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
