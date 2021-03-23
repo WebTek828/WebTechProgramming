@@ -52,6 +52,7 @@
     transform: translate(-50%, -200%) skew(-24deg);
     opacity: 0;
     visibility: hidden;
+    transition: all 0.7s;
   }
 }
 .show-text {
@@ -83,6 +84,10 @@
   margin-left: 0.5rem;
   display: inline-block;
   animation: moveUpDown 2s infinite;
+}
+
+.inactive {
+  transform: translate(-50%, 200%) !important;
 }
 
 @keyframes moveUpDown {

@@ -89,6 +89,8 @@ html {
           transform: translate(-50%, -200%) skew(-24deg);
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
 }
 
 .show-text {
@@ -127,6 +129,11 @@ html {
   display: inline-block;
   -webkit-animation: moveUpDown 2s infinite;
           animation: moveUpDown 2s infinite;
+}
+
+.inactive {
+  -webkit-transform: translate(-50%, 200%) !important;
+          transform: translate(-50%, 200%) !important;
 }
 
 @-webkit-keyframes moveUpDown {
