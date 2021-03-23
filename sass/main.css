@@ -165,4 +165,36 @@ html {
             transform: translateY(-0.2rem);
   }
 }
+
+.skills-section {
+  padding: 4rem;
+  background: black;
+}
+
+.skills {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(17rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 2rem;
+}
+
+.skills__heading {
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid var(--primary-color);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  padding-bottom: 1rem;
+}
+
+.skill {
+  background: green;
+  padding: 2rem;
+}
 /*# sourceMappingURL=main.css.map */

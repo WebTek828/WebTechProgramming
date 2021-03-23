@@ -1,0 +1,27 @@
+.skills-section {
+  padding: 4rem;
+  background: black;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 2rem;
+
+  &__heading {
+    color: white;
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border-bottom: 3px solid var(--primary-color);
+    width: max-content;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.skill {
+  background: green;
+  padding: 2rem;
+}
