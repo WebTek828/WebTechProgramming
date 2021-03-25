@@ -308,6 +308,10 @@ html {
   padding: 2rem;
 }
 
+.about-heading {
+  margin-bottom: 2rem;
+}
+
 .about {
   width: 70%;
   margin: 0 auto;
@@ -332,8 +336,150 @@ html {
 }
 
 .projects-section {
-  padding: 2rem;
-  background: -webkit-gradient(linear, left bottom, right top, from(var(--primary-color, var(--secondary-color))));
-  background: linear-gradient(to right top, var(--primary-color, var(--secondary-color)));
+  padding: 4rem;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primary-color)), to(var(--secondary-color)));
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(24rem, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+}
+
+.project {
+  position: relative;
+  -webkit-transition: all 1.4s;
+  transition: all 1.4s;
+  height: 18rem;
+  background: white;
+  z-index: 1000;
+  background-image: url("../imgs/mypicture.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.project:hover {
+  background: rgba(0, 0, 0, 0.75);
+  background-position: center;
+  background-size: cover;
+}
+
+.project:hover .project__btns {
+  opacity: 1;
+  visibility: visible;
+}
+
+.project__btns {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.project__website, .project__github {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  margin: 0.4rem 0;
+  cursor: pointer;
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.project__website {
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+  background: var(--primary-color);
+}
+
+.project__website i {
+  color: black;
+  margin-right: 0.5rem;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.project__website:hover {
+  background: red;
+  color: black;
+}
+
+.project__website:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: white;
+}
+
+.project__github {
+  -webkit-transform: translateY(4rem);
+          transform: translateY(4rem);
+  background: var(--secondary-color);
+  display: block;
+}
+
+.project__github i {
+  color: black;
+  margin-right: 0.5rem;
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.project__github:hover {
+  background: blueviolet;
+  color: black;
+}
+
+.project__github:hover i {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: white;
+}
+
+.project__techs {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  font-weight: 500;
+  background: -webkit-gradient(linear, left top, right top, from(var(--primary-color)), to(var(--secondary-color)));
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateX(-8rem);
+          transform: translateX(-8rem);
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.project:hover .project__github,
+.project:hover .project__website {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.project:hover .project__techs {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 /*# sourceMappingURL=main.css.map */
