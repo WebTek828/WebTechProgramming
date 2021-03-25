@@ -15,7 +15,7 @@
     justify-content: flex-end;
     align-self: stretch;
   }
-  &__list-item {
+  &__list-item:not(:last-child) {
     margin: 0 0.4rem;
     text-transform: uppercase;
     font-weight: 400;
@@ -47,5 +47,25 @@
   &__list-item:hover::before {
     opacity: 1;
     transform: translateX(0);
+  }
+  &__list-btn {
+    align-self: center;
+    border: 2px solid white;
+    color: var(--primary-color);
+    border-radius: 4rem;
+    padding: 0.4rem 1.5rem;
+    outline: none;
+    background: var(--primary-color);
+    transition: all 0.4s;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    margin: 0 0.4rem;
+
+    &:hover {
+      background: none;
+      color: var(--primary-color);
+    }
   }
 }
