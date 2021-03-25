@@ -270,7 +270,27 @@ html {
 }
 
 .skill {
-  background: green;
+  text-align: center;
+  background: white;
+  line-height: 1.4rem;
+  padding: 2rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.skill h4 {
+  margin: 1rem 0;
+}
+
+.skill:hover {
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+.about {
+  background: grey;
   padding: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
