@@ -21,12 +21,12 @@
   &__primary-heading {
     display: block;
     text-align: center;
-    letter-spacing: 0.7rem;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
   }
   &__secondary-heading {
     display: block;
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.2rem;
     margin: 0.8rem 0;
     display: flex;
     align-items: center;
@@ -40,7 +40,7 @@
     height: 3rem;
     position: relative;
     margin: 0 1rem;
-    letter-spacing: 0.3rem;
+    letter-spacing: 0.2rem;
     transform: skew(24deg);
   }
   .design,

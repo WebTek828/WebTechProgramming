@@ -125,13 +125,13 @@ html {
 .home__primary-heading {
   display: block;
   text-align: center;
-  letter-spacing: 0.7rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
 
 .home__secondary-heading {
   display: block;
-  letter-spacing: 0.5rem;
+  letter-spacing: 0.2rem;
   margin: 0.8rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -150,7 +150,7 @@ html {
   height: 3rem;
   position: relative;
   margin: 0 1rem;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
   -webkit-transform: skew(24deg);
           transform: skew(24deg);
 }
@@ -280,6 +280,9 @@ html {
 
 .skill h4 {
   margin: 1rem 0;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .skill:hover {
@@ -289,8 +292,32 @@ html {
           box-shadow: var(--box-shadow);
 }
 
-.about {
+.skill img {
+  width: 4rem;
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+.skill:hover img {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.about-section {
   background: grey;
   padding: 2rem;
+}
+
+.about {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.about img {
+  margin: 1rem 0;
+  height: 8rem;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=main.css.map */

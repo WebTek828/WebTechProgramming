@@ -1,4 +1,17 @@
-.about {
+.about-section {
   background: grey;
   padding: 2rem;
+}
+
+.about {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 2rem;
+
+  img {
+    margin: 1rem 0;
+    height: 8rem;
+    border-radius: 50%;
+  }
 }
