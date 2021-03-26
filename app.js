@@ -61,12 +61,23 @@ const projectSection = document.querySelector(".projects-section");
 const aboutSection = document.querySelector(".about-section");
 const formSection = document.querySelector(".form-section");
 
-const sections = [home, projectSection, aboutSection, formSection];
+const sections = [
+  home,
+  projectSection,
+  aboutSection,
+  formSection,
+  home,
+  projectSection,
+  aboutSection,
+  formSection,
+];
 
 const navItems = document.querySelectorAll(".nav__list-item");
 
 navItems.forEach((navItem, i) => {
   navItem.addEventListener("click", () => {
+    mobileNav.classList.remove("show-nav-items");
+    mobileNavListItems.classList.remove("mobile-nav__items-show");
     sections[i].scrollIntoView({ behavior: "smooth" });
   });
 });

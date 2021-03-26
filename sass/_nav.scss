@@ -193,3 +193,8 @@
   opacity: 0.85;
   z-index: 10000;
 }
+
+.nav__list-item:last-child:hover {
+  background: none;
+  color: var(--primary-color) !important;
+}
