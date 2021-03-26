@@ -52,11 +52,13 @@
       transform: translateX(-200%);
       opacity: 0;
       transition: all 0.4s;
+      visibility: hidden;
     }
   }
   &__list-item:hover::before {
     opacity: 1;
     transform: translateX(0);
+    visibility: visible;
   }
   &__list-btn {
     align-self: center;

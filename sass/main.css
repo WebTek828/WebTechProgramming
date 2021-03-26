@@ -112,12 +112,14 @@ html {
   opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  visibility: hidden;
 }
 
 .nav__list-item:hover::before {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  visibility: visible;
 }
 
 .nav__list-btn {
