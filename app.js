@@ -1,5 +1,6 @@
 const design = document.querySelector(".design");
 const development = document.querySelector(".development");
+const backToHomeBtn = document.querySelector(".back-home");
 
 let active = "design";
 
@@ -39,11 +40,13 @@ let timer;
 const callBack = (entries, observer) => {
   const [entry] = entries;
   if (entry.isIntersecting) {
+    backToHomeBtn.classList.remove("back-home-show");
     nav.classList.remove("sticky-nav");
     timer = setInterval(() => {
       changeText();
     }, 3000);
   } else {
+    backToHomeBtn.classList.add("back-home-show");
     nav.classList.add("sticky-nav");
     clearInterval(timer);
   }
@@ -79,5 +82,13 @@ navItems.forEach((navItem, i) => {
     mobileNav.classList.remove("show-nav-items");
     mobileNavListItems.classList.remove("mobile-nav__items-show");
     sections[i].scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+//back to home page
+
+backToHomeBtn.addEventListener("click", () => {
+  home.scrollIntoView({
+    behavior: "smooth",
   });
 });

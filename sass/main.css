@@ -840,4 +840,35 @@ html {
   padding: 1rem;
   border-bottom: 2px solid black;
 }
+
+.back-home {
+  height: 4rem;
+  width: 4rem;
+  background: black;
+  border-radius: 50%;
+  display: block;
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 10000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.back-home i {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.back-home-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 /*# sourceMappingURL=main.css.map */
