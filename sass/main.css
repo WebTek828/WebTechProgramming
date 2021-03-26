@@ -657,6 +657,10 @@ html {
   transition: all 0.4s;
 }
 
+.project__btns a {
+  text-decoration: none;
+}
+
 .project__website, .project__github {
   width: -webkit-max-content;
   width: -moz-max-content;
