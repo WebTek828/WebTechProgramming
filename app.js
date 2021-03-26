@@ -26,3 +26,12 @@ function changeText() {
 setInterval(() => {
   changeText();
 }, 3000);
+
+const hamburgerIcon = document.querySelector(".hamburger");
+const mobileNav = document.getElementById("mobile-nav");
+const mobileNavListItems = document.querySelector(".mobile-nav__list-items");
+
+hamburgerIcon.addEventListener("click", (e) => {
+  mobileNav.classList.toggle("show-nav-items");
+  mobileNavListItems.classList.toggle("mobile-nav__items-show");
+});

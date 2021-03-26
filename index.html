@@ -19,15 +19,28 @@
       <nav class="nav">
         <ul class="nav__lists">
           <div class="nav__logo">Logo</div>
-          <duv class="nav__list-items">
+          <div class="nav__list-items">
             <li class="nav__list-item">home</li>
             <li class="nav__list-item">projects</li>
             <li class="nav__list-item">about me</li>
             <button class="nav__list-btn">
               <li class="nav__list-item">hire me</li>
             </button>
-          </duv>
+          </div>
+          <div class="hamburger">
+             <span class="hamburger__icon"></span>
+          </div>
         </ul>
+        <div id="mobile-nav" class="nav__items-mobile">
+          <div class="mobile-nav__list-items">
+            <li class="nav__list-item">home</li>
+            <li class="nav__list-item">projects</li>
+            <li class="nav__list-item">about me</li>
+            <button class="nav__list-btn">
+              <li class="nav__list-item">hire me</li>
+            </button>
+          </div>
+        </div>
       </nav>
       <section class="home">
         <h1 class="home__heading">
@@ -37,9 +50,14 @@
             <span class="design show-text">Design</span>
             <span class="development">Development</span>
            </div>
-           Business
+          <span class="home__text-business">Business</span>
         </h1>
         <button class="btn">Hire Me<i class="down-arrow fas fa-angle-down"></i></button>
+        <div class="social-icons home-social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/WebTek828" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/channel/UCBBEbHBTESh6ZLBDvJFA2_A" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
       </section>
       <section class="skills-section">
         <h4 class="skills__heading">My Skills</h4>
@@ -153,6 +171,14 @@
           <button  class="btn form__btn">Submit</button>
         </form>
       </section>
+      <footer class="footer">
+        <div class="social-icons footer__social-icons">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://github.com/WebTek828" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.youtube.com/channel/UCBBEbHBTESh6ZLBDvJFA2_A" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="footer__text">© All rights reserved</p>
+      </footer>
     </div>
     <script src="app.js"></script>
   </body>

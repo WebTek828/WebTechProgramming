@@ -30,6 +30,8 @@
     margin: 0.8rem 0;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   &__business {
     display: inline-block;
@@ -88,6 +90,47 @@
 
 .inactive {
   transform: translate(-50%, 200%) !important;
+}
+
+.home-social-icons {
+  position: absolute;
+  bottom: 0;
+}
+.social-icons {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  transition: all 0.2s;
+  width: 100%;
+  text-align: center;
+
+  &:hover i {
+    color: rgba(255, 255, 255, 0.301);
+  }
+
+  a {
+    text-decoration: none;
+  }
+  i {
+    color: black;
+    padding: 1rem;
+    margin: 0 0.4rem;
+    transition: all 0.2s;
+    display: inline-block;
+    &:hover {
+      color: black;
+      cursor: pointer;
+      transform: translateY(-6px) scale(1.2);
+    }
+    &:active {
+      transform: translateY(0) scale(1);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .home__text-business {
+    margin-top: 1rem;
+  }
 }
 
 @keyframes moveUpDown {
