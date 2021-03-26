@@ -2,6 +2,7 @@
   background: black;
   color: white;
   padding: 0.8rem 2rem;
+  transition: all 0.4s;
 
   &__logo {
     z-index: 1000;
@@ -183,4 +184,12 @@
   #mobile-nav {
     display: none;
   }
+}
+
+.sticky-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0.85;
+  z-index: 10000;
 }
