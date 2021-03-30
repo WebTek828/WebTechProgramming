@@ -34,6 +34,8 @@ html {
   background: black;
   color: white;
   padding: 0.8rem 2rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 .nav__logo {
@@ -110,12 +112,14 @@ html {
   opacity: 0;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
+  visibility: hidden;
 }
 
 .nav__list-item:hover::before {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  visibility: visible;
 }
 
 .nav__list-btn {
@@ -275,6 +279,19 @@ html {
   #mobile-nav {
     display: none;
   }
+}
+
+.sticky-nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  opacity: 0.85;
+  z-index: 10000;
+}
+
+.nav__list-item:last-child:hover {
+  background: none;
+  color: var(--primary-color) !important;
 }
 
 .home {
@@ -636,6 +653,10 @@ html {
   transition: all 0.4s;
 }
 
+.project__btns a {
+  text-decoration: none;
+}
+
 .project__website, .project__github {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -860,5 +881,36 @@ html {
   margin: 1rem 0;
   padding: 1rem;
   border-bottom: 2px solid black;
+}
+
+.back-home {
+  height: 4rem;
+  width: 4rem;
+  background: black;
+  border-radius: 50%;
+  display: block;
+  position: fixed;
+  bottom: 4rem;
+  right: 2rem;
+  z-index: 10000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: none;
+}
+
+.back-home i {
+  font-size: 1.6rem;
+  color: var(--primary-color);
+}
+
+.back-home-show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=main.css.map */
