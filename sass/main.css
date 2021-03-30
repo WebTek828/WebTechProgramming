@@ -595,6 +595,7 @@ html {
   display: grid;
   -ms-grid-columns: (minmax(24rem, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(24rem, 1fr));
+  gap: 1rem;
 }
 
 @media (max-width: 600px) {
@@ -611,15 +612,10 @@ html {
   height: 18rem;
   background: white;
   z-index: 1000;
-  background-image: url("../imgs/mypicture.jpg");
-  background-position: center;
-  background-size: cover;
 }
 
 .project:hover {
   background: rgba(0, 0, 0, 0.75);
-  background-position: center;
-  background-size: cover;
 }
 
 .project:hover .project__btns {
@@ -737,6 +733,48 @@ html {
   visibility: visible;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+}
+
+.project-1 {
+  background: url("../imgs/project-1.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-2 {
+  background: url("../imgs/project-2.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-3 {
+  background: url("../imgs/project-3.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-4 {
+  background: url("../imgs/project-4.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-5 {
+  background: url("../imgs/project-5.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.project-6 {
+  background: url("../imgs/project-6.png");
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .form-section {
