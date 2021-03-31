@@ -1,6 +1,7 @@
 const design = document.querySelector(".design");
 const development = document.querySelector(".development");
 const backToHomeBtn = document.querySelector(".back-home");
+const wrapper = document.querySelector(".wrapper");
 
 let active = "design";
 
@@ -96,6 +97,9 @@ backToHomeBtn.addEventListener("click", () => {
 const formBtn = document.querySelector(".form__btn");
 const formInputs = document.querySelectorAll(".form__input");
 const formMsg = document.querySelector(".form__message");
+const displayMsgContainer = document.querySelector(
+  ".display-message-container"
+);
 
 const firebaseConfig = {
   apiKey: "AIzaSyDe1m_at0OAtT-61-91pC2fi5UBm2nLmyI",
@@ -108,7 +112,7 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
 
-let respMsg;
+let respData;
 
 formBtn.addEventListener("click", async (e) => {
   e.preventDefault();
@@ -125,22 +129,37 @@ formBtn.addEventListener("click", async (e) => {
     formInputs[0].value = "";
     formInputs[1].value = "";
     formMsg.value = "";
-    respMsg =
-      "Your message has been submitted successfully.We will get back to you as soon as possible.";
+    respData =
+      "Your message has been sent.We will get back to you as soon as possible";
   } catch (err) {
-    respMsg = err;
+    console.log(err);
+    respData = err;
   }
-  displayMsg();
+  showMsg();
 });
 
-const displayMsgContainer = document.querySelector(
-  ".display-message-container"
-);
-
-function displayMsg() {
-  displayMsgContainer.classList.add("display-message-show");
+function showMsg() {
+  const html = `
+  <div class="backdrop">
+    <div class="display-message">
+      <h4>${respData}</h4>
+      <button class="btn display-message__btn">OK</button>
+    </div>
+  </div>
+  `;
+  wrapper.insertAdjacentHTML("afterbegin", html);
 }
 
-displayMsgContainer.addEventListener("click", (e) => {
-  displayMsgContainer.classList.remove("display-message-show");
+wrapper.addEventListener("click", (e) => {
+  e.target.classList.contains("display-message__btn") &&
+    document.querySelector(".backdrop").classList.add("display-message-hide");
+});
+
+const allInputs = [...formInputs, formMsg];
+
+allInputs.forEach((input) => {
+  input.addEventListener("input", (e) => {
+    const valid = allInputs.some((input) => input.value === "");
+    valid ? (formBtn.disabled = true) : (formBtn.disabled = false);
+  });
 });

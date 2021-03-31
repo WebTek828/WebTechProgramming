@@ -40,6 +40,11 @@
     width: 100%;
   }
 
+  &__btn:disabled {
+    background: black;
+    cursor: not-allowed;
+  }
+
   @media (max-width: 1000px) {
     width: 80%;
   }
@@ -48,7 +53,7 @@
   }
 }
 
-.display-message-container {
+.backdrop {
   background: rgba(0, 0, 0, 0.527);
   width: 100vw;
   height: 100vh;
@@ -56,8 +61,8 @@
   top: 0;
   left: 0;
   z-index: 10000;
-  display: none;
 }
+
 .display-message {
   display: flex;
   flex-direction: column;
@@ -73,6 +78,6 @@
   box-shadow: 0 4px 2px 0 grey;
 }
 
-.display-message-show {
-  display: block;
+.display-message-hide {
+  display: none;
 }

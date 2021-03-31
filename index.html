@@ -164,19 +164,13 @@
         <h4 class="skills__heading">Contact</h4>
         <form class="form">
           <div class="form__person-info">
-            <input type="text" placeholder="Name" class="form__input">
-            <input type="text" placeholder="Email" class="form__input">
+            <input type="text" required placeholder="Name" class="form__input">
+            <input type="email" required placeholder="Email" class="form__input">
           </div>
-          <textarea placeholder="Message"  cols="30" rows="10" class="form__message"></textarea>
-          <button  class="btn form__btn">Submit</button>
+          <textarea required placeholder="Message"  cols="30" rows="10" class="form__message"></textarea>
+          <button  class="btn form__btn" disabled="true">Submit</button>
         </form>
       </section>
-      <div class="display-message-container">
-        <div class="display-message">
-          <h4 class="display-message__heading">Your message has been submitted successfully.We will get back to you as soon as possible.</h4>
-          <button class="btn">OK</button>
-        </div>
-      </div>
       <footer class="footer">
         <div class="social-icons footer__social-icons">
           <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>

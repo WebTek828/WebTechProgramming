@@ -852,6 +852,11 @@ html {
   width: 100%;
 }
 
+.form__btn:disabled {
+  background: black;
+  cursor: not-allowed;
+}
+
 @media (max-width: 1000px) {
   .form {
     width: 80%;
@@ -864,7 +869,7 @@ html {
   }
 }
 
-.display-message-container {
+.backdrop {
   background: rgba(0, 0, 0, 0.527);
   width: 100vw;
   height: 100vh;
@@ -872,7 +877,6 @@ html {
   top: 0;
   left: 0;
   z-index: 10000;
-  display: none;
 }
 
 .display-message {
@@ -901,8 +905,8 @@ html {
           box-shadow: 0 4px 2px 0 grey;
 }
 
-.display-message-show {
-  display: block;
+.display-message-hide {
+  display: none;
 }
 
 .footer {
