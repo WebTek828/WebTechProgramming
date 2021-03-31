@@ -47,3 +47,32 @@
     width: 100%;
   }
 }
+
+.display-message-container {
+  background: rgba(0, 0, 0, 0.527);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  display: none;
+}
+.display-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  width: 24rem;
+  height: max-content;
+  padding: 2rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 2px 0 grey;
+}
+
+.display-message-show {
+  display: block;
+}

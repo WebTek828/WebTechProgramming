@@ -92,3 +92,55 @@ backToHomeBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+const formBtn = document.querySelector(".form__btn");
+const formInputs = document.querySelectorAll(".form__input");
+const formMsg = document.querySelector(".form__message");
+
+const firebaseConfig = {
+  apiKey: "AIzaSyDe1m_at0OAtT-61-91pC2fi5UBm2nLmyI",
+  authDomain: "portfolio-form-48ba2.firebaseapp.com",
+  projectId: "portfolio-form-48ba2",
+  storageBucket: "portfolio-form-48ba2.appspot.com",
+  messagingSenderId: "432855738729",
+  appId: "1:432855738729:web:a14031910233b325dff5f8",
+};
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
+let respMsg;
+
+formBtn.addEventListener("click", async (e) => {
+  e.preventDefault();
+  try {
+    const name = formInputs[0].value;
+    const email = formInputs[1].value;
+    const msg = formMsg.value;
+
+    const resp = await db.collection("form-message").add({
+      name,
+      email,
+      msg,
+    });
+    formInputs[0].value = "";
+    formInputs[1].value = "";
+    formMsg.value = "";
+    respMsg =
+      "Your message has been submitted successfully.We will get back to you as soon as possible.";
+  } catch (err) {
+    respMsg = err;
+  }
+  displayMsg();
+});
+
+const displayMsgContainer = document.querySelector(
+  ".display-message-container"
+);
+
+function displayMsg() {
+  displayMsgContainer.classList.add("display-message-show");
+}
+
+displayMsgContainer.addEventListener("click", (e) => {
+  displayMsgContainer.classList.remove("display-message-show");
+});
