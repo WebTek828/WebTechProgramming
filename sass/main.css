@@ -640,6 +640,16 @@ html {
   visibility: visible;
 }
 
+.project:hover .project__img {
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
+}
+
+.project__img {
+  height: 100%;
+  width: 100%;
+}
+
 .project__btns {
   position: absolute;
   top: 50%;
@@ -754,48 +764,6 @@ html {
   visibility: visible;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-}
-
-.project-1 {
-  background: url("../imgs/project-1.png");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.project-2 {
-  background: url("../imgs/project-2.png");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.project-3 {
-  background: url("../imgs/project-3.png");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.project-4 {
-  background: url("../imgs/project-4.png");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.project-5 {
-  background: url("../imgs/project-5.png");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.project-6 {
-  background: url("../imgs/project-6.png");
-  background-position: left;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .form-section {
