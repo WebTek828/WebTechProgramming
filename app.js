@@ -64,6 +64,7 @@ observer.observe(home, observer);
 const projectSection = document.querySelector(".projects-section");
 const aboutSection = document.querySelector(".about-section");
 const formSection = document.querySelector(".form-section");
+const hireMeBtn = document.getElementById("hire-me");
 
 const sections = [
   home,
@@ -83,6 +84,12 @@ navItems.forEach((navItem, i) => {
     mobileNav.classList.remove("show-nav-items");
     mobileNavListItems.classList.remove("mobile-nav__items-show");
     sections[i].scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+hireMeBtn.addEventListener("click", (e) => {
+  formSection.scrollIntoView({
+    behavior: "smooth",
   });
 });
 
@@ -136,7 +143,7 @@ formBtn.addEventListener("click", async (e) => {
     respData = err;
   }
   showMsg();
-  formBtn.disabled =true
+  formBtn.disabled = true;
 });
 
 function showMsg() {
