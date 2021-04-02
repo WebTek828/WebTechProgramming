@@ -136,6 +136,7 @@ formBtn.addEventListener("click", async (e) => {
     respData = err;
   }
   showMsg();
+  formBtn.disabled =true
 });
 
 function showMsg() {
